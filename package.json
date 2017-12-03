@@ -1,0 +1,14 @@
+{
+  "name": "tf2-prices",
+  "version": "1.0.0",
+  "description": "Get prices for items on www.backpack.tf using their listing api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicklas (http://steamcommunity.com/id/nicklason/)",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}

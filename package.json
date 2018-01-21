@@ -1,5 +1,5 @@
 {
-  "name": "tf2-prices",
+  "name": "bptf-prices",
   "version": "1.0.0",
   "description": "Get prices for items on www.backpack.tf using their listing api",
   "main": "index.js",

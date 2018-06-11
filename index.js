@@ -21,17 +21,22 @@ function Pricer(options) {
 	this.request = Request;
 }
 
-Pricer.prototype.init = function() {
+Pricer.prototype.init = function(callback) {
 	var self = this;
 	self.updateKeyTimer = setInterval(Pricer.prototype.getKeyPrice.bind(self), self.keyPriceCheckTime);
 	self.getKeyPrice(function(err, price) {
 		if (err) {
-			self.init();
+			if (callback) {
+				callback(err);
+			}
 			return;
 		}
 
 		self.ready = true;
 		self.emit("ready");
+		if (callback) {
+			callback(null);
+		}
 	});
 };
 

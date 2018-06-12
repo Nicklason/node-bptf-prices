@@ -9,7 +9,9 @@ module.exports = Pricer;
 require('util').inherits(Pricer, require('events').EventEmitter);
 
 function Pricer(options) {
-	options = options || require('./config.js');
+	if (options == undefined) {
+		options = require('./config.js');
+	}
 
 	this.apiKey = options.apiKey;
 	this.retryTime = options.retryTime || 2000;
